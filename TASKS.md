@@ -115,6 +115,8 @@ To calculate the food an animal needs in kilograms in 1 day, the zookeepers use 
 5. If the animal is a fish: The required food is 0 kg
 
 // Your solution
+1. Created `utils/useCalculateFoodRequired.ts` to encapsulate the feeding logic.
+2. Added a `Food (kg/month)` column to `TheAnimalTable.vue` to display the calculated values for each animal.
 
 ### Task 8: Plan New Feature
 

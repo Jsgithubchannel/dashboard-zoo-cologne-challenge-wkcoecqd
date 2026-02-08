@@ -28,6 +28,8 @@ const getOriginalIdx = (animal: Animal) => {
         <th>Gender</th>
         <th>Age (yrs)</th>
         <th>Weight (kg)</th>
+        <th>Food (kg/month)</th>
+
       </tr>
     </thead>
     <tbody>
@@ -42,6 +44,7 @@ const getOriginalIdx = (animal: Animal) => {
         <td>{{ animal.gender }}</td>
         <td>{{ useCalculateAgeInYears(new Date(animal.birthdate)) }}</td>
         <td>{{ animal.weight }}</td>
+        <td>{{ useCalculateFoodRequired(animal) }}</td>
       </tr>
     </tbody>
   </table>
