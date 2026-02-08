@@ -163,4 +163,9 @@ Don't spend more thatn 15-30 minutes here - planning like this can quickly becom
 Revisit docs from step 3, see if you want to add anything. Also think about bonuses. Add a general comment about anything (inside the universe of the challenge or out of it) if you want to.
 
 // Your solution
--
+- In the animal detail view `[id].vue`, I refactored the hardcoded template into a data-driven structure using `computed` and `v-for`.
+- Fixed the sorting bug where clicking a name in a sorted list would open the wrong animal's detail page by implementing the `getOriginalIdx` helper.
+
+- One particular area that drag my interest was the **Task 8: Plan New Feature**.
+    - If we implement the new "Feeding Plan" feature where users can choose *any* fruit, this logic might lead to overfeeding (e.g., adding 28kg even when feeding bananas).
+    - I believe the bonus food logic should likely be tied to the **actual food served** (e.g., "If serving cherries, add 28kg") rather than the animal's general preference.
