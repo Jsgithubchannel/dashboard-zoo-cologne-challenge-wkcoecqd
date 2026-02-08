@@ -11,6 +11,11 @@ const animalsSortedByName = computed(() =>
     animalA.name.localeCompare(animalB.name),
   ),
 )
+
+// to find the original index of an animal in the array.
+const getOriginalIdx = (animal: Animal) => {
+  return props.animals.indexOf(animal) + 1
+}
 </script>
 
 <template>
@@ -26,13 +31,17 @@ const animalsSortedByName = computed(() =>
       </tr>
     </thead>
     <tbody>
-      <tr v-for="({ species, name, gender, birthdate, weight }, animalIndex) in animalsSortedByName" :key="animalIndex">
-        <td>{{ animalIndex + 1 }}</td>
-        <td>{{ species }}</td>
-        <td>{{ name }}</td>
-        <td>{{ gender }}</td>
-        <td>{{ useCalculateAgeInYears(new Date(birthdate)) }}</td>
-        <td>{{ weight }}</td>
+      <tr v-for="(animal, i) in animalsSortedByName" :key="i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ animal.species }}</td>
+        <td>
+          <NuxtLink :to="`/animals/${getOriginalIdx(animal)}`" class="text-blue-600 hover:underline">
+            {{ animal.name }}
+          </NuxtLink>
+        </td>
+        <td>{{ animal.gender }}</td>
+        <td>{{ useCalculateAgeInYears(new Date(animal.birthdate)) }}</td>
+        <td>{{ animal.weight }}</td>
       </tr>
     </tbody>
   </table>

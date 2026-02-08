@@ -95,6 +95,11 @@ Please fix the two above problems and outline what was necessarry to do so.
 The zookeepers want to be able to see all details of an animal. Please create such a view that allows them to do so, outline anything about your process while adding the view below. The zookeepers didn't have time for more information, sorry. They'll surely be glad to criticize the first version intensly though and will want to know why you went for the approach you chose.
 
 // Your solution
+1. Created a new page `pages/animals/[id].vue` to handle individual animal details.
+2. Updated `TheAnimalTable.vue` to link the animal's name to its detail page.
+3. In the detail view, instead of hardcoding every field in the template, I created a computed property that structures the data as an array.
+    - This makes the code cleaner and eaiser to maintain.
+    - Adding a new field in the future only requires upating the data array, not the HTML structure.
 
 ### Task 7: Logic Feature
 
