@@ -35,6 +35,9 @@ In a first step you should inspect the health of the project and report on every
 Please take stock fo the page using developer tools, your instincts, ... and write down below what you find.
 
 // Your solution
+1. Identified a typo in server/api/animals.get.ts. The variable is named 'ANIMALS' but exported as 'ANlMALS'.
+2. Found an unnecessary 'alert('get wrecked cologne zoo!')' script in app.vue
+3. The Name column is missing in the table (components/TheAnimalTable.vue), although the data exists in fakeData.ts. Also, 'animalsSortedByName' sorts by weight, instead of name.
 
 ### Task 2: Get the basics running again
 
@@ -45,6 +48,10 @@ Now that we know that is broken, let's try to get things running again, step by 
 Zookeepers reported that the error sometimes changes when reloading the page after the initial start.
 
 // Your solution
+1. The dashboard successfully loads, displaying the 'Cologne Zoo' title, and a table listing the animals.
+2. Corrected the typo in server/api/animals.get.ts from 'ANlMALS' to 'ANIMALS'
+3. Deleted the 'alert('get wrecked cologne zoo!')' line from app.vue
+4. Ran 'pnpm run dev' and confirmed the dashboard loads without errors.
 
 ### Task 3: Start the documentation
 
@@ -53,6 +60,10 @@ You got it to work! Nice, now the basic functionality is back for the zookeepers
 Add your solution below, either as an inline text or link to new documentation file(s) you've created.
 
 // Your solution
+Create a 'READMe.md' file including:
+- Project overview and Tech Stack
+- Instructions for Installation
+- Commands for Development, Test, and Linting
 
 ### Task 4: Test fixing
 
