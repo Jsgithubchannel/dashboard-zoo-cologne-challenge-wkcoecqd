@@ -98,8 +98,8 @@ The zookeepers want to be able to see all details of an animal. Please create su
 1. Created a new page `pages/animals/[id].vue` to handle individual animal details.
 2. Updated `TheAnimalTable.vue` to link the animal's name to its detail page.
 3. In the detail view, instead of hardcoding every field in the template, I created a computed property that structures the data as an array.
-    - This makes the code cleaner and eaiser to maintain.
-    - Adding a new field in the future only requires upating the data array, not the HTML structure.
+    - This makes the code cleaner and easier to maintain.
+    - Adding a new field in the future only requires updating the data array, not the HTML structure.
 
 ### Task 7: Logic Feature
 
