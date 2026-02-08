@@ -49,9 +49,9 @@ Zookeepers reported that the error sometimes changes when reloading the page aft
 
 // Your solution
 1. The dashboard successfully loads, displaying the 'Cologne Zoo' title, and a table listing the animals.
-2. Corrected the typo in server/api/animals.get.ts from 'ANlMALS' to 'ANIMALS'
-3. Deleted the 'alert('get wrecked cologne zoo!')' line from app.vue
-4. Ran 'pnpm run dev' and confirmed the dashboard loads without errors.
+2. Corrected the typo in server/api/animals.get.ts from `ANlMALS` to `ANIMALS`.
+3. Deleted the `alert('get wrecked cologne zoo!')` line from app.vue
+4. Ran `pnpm run dev` and confirmed the dashboard loads without errors.
 
 ### Task 3: Start the documentation
 
@@ -60,7 +60,7 @@ You got it to work! Nice, now the basic functionality is back for the zookeepers
 Add your solution below, either as an inline text or link to new documentation file(s) you've created.
 
 // Your solution
-Create a 'READMe.md' file including:
+Create a `README.md` file including:
 - Project overview and Tech Stack
 - Instructions for Installation
 - Commands for Development, Test, and Linting
@@ -70,6 +70,10 @@ Create a 'READMe.md' file including:
 There's a failing test that for the age calculation helper. Can you figure out what is broken in the implementation or the test it is and resolve the problem? All zookeepers are really interested in what is going on here.
 
 // Your solution
+- The test failed because the requirement is to "always round up" but the implementation used `Math.round`.
+- Changed `Math.round` to `Math.ceil` in 'utils/useCalculateAgeInYears.ts'.
+- As a result, a newborn animal is counted as 1 year old.
+
 
 ### Task 5: UI Fixing and Improvement
 
@@ -82,6 +86,9 @@ The zookeepers report that the table is incomplete and different than usually. M
 Please fix the two above problems and outline what was necessarry to do so.
 
 // Your solution
+1. Added the `Name` column to the table header and body.
+2. Updated the computed property `animalsSortedByName` to sort by name instead of weight.
+3. Applied the `useCalculateAgeInYears` composable to the birthdata field to display age in years.
 
 ### Task 6: UI Feature 1
 
