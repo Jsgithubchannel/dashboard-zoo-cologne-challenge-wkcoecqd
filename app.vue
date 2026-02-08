@@ -1,7 +1,5 @@
 <script setup lang="ts">
 const { animals } = useAnimals()
-
-alert('get wrecked cologne zoo!')
 </script>
 
 <template>
