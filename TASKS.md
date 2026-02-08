@@ -142,9 +142,25 @@ Please create a breakdown for this feature. You can focus on aspects like: What 
 Don't spend more thatn 15-30 minutes here - planning like this can quickly become quite complex and we want to prevent this challenge taking too much of your time!
 
 // Your solution
+1. Data Structure and State Management
+- Since the requirements involve grouping tasks by date, we need a store or composable to manage the state:
+    - **Structure:** A dictionary/map object where keys are dates (e.g., `'2023-10-24'`) and values are arrays of tasks.
+    - **Task object:** `{ animalId: string, fruit: Fruit, amount: number, completed: boolean }`
+
+2. UI/UX Design
+- **Calender view**: Users can click a day to view or add tasks.
+- **Todo List**
+    - **Add Task Form**: Dropdowns to select an animal and a fruit. The "Amount" should be auto-calculated and displayed as read-only
+    - **List**: Grouped by date as requested.
+    - **Status**: Checkboxes to mark feeding as done.
+
+3. Questions
+- Can an animal be fed twice a day? If then, should we warn the user?
+- The current algorithm adds 28kg simply because the animal **likes** cherries. Does this make sense if we are feeding them a different fruit (e.g., Bananas)? Should the 28kg extra requirement be tied to the *actual food served* rather than the *preference*?
 
 ### Task 9: Finish the documentation
 
 Revisit docs from step 3, see if you want to add anything. Also think about bonuses. Add a general comment about anything (inside the universe of the challenge or out of it) if you want to.
 
 // Your solution
+-
